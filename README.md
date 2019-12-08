@@ -1,7 +1,4 @@
-# jchou-web-finale
+# jchou-web-v7
 
-The finale of my website building journey. 
+Updated website built with: React
 
-Built with: React
-
-jchou-web-finale :O
