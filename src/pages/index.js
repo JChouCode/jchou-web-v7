@@ -1,7 +1,5 @@
 import React from 'react'
-import { Link, Router } from 'components/Router'
 import "./css/index.css"
-// import { url } from 'inspector'
 
 export default () => (
   <div className="index">
