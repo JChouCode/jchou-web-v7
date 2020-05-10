@@ -44,6 +44,14 @@ export default () => (
           </thead>
           <tbody>
             <tr className="intern-head">
+              <td>ServiceNow</td>
+              <td>Software Engineer Intern</td>
+              <td>5/20 - 8/20</td>
+            </tr>
+            <tr className="border intern-desc">
+              <td colSpan="3">- Platform Intern: Ongoing</td>
+            </tr>
+            <tr className="intern-head">
               <td>IoTeX</td>
               <td>Software Engineer Intern</td>
               <td>6/19-9/19</td>
