@@ -12,6 +12,7 @@
   "disableRuntime": false,
   "preloadPollInterval": 300,
   "productionSourceMaps": false,
+  "silent": false,
   "entry": "index.js",
   "plugins": [
     [
@@ -39,7 +40,7 @@
     "HTML_TEMPLATE": "/Users/jeffreychou/Desktop/jchou-web-v7/dist/index.html",
     "STATIC_DATA": "/Users/jeffreychou/Desktop/jchou-web-v7/dist/staticData"
   },
-  "siteRoot": "",
+  "siteRoot": "/",
   "basePath": "",
   "publicPath": "/",
   "assetsPath": "",
