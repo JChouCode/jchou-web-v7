@@ -13,16 +13,27 @@
   z-index: 100;
   opacity: 0;
   visibility: hidden;
-  animation: 2.5s delay-fadeout cubic-bezier(0.23, 1, 0.320, 1);
+  animation: 1s delay-fadeout cubic-bezier(0.23, 1, 0.320, 1);
 }
 
 .welcome #logo {
-  position: absolute;
   color: rgba(0, 0, 0, .3);
+  position: absolute;
   top: 50vh;
   left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin-top: -13px;
+  margin-left: -25px;
+  animation: 0.5s drop-down cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+@keyframes drop-down {
+  0% {
+    transform: translateY(-150px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .welcome #logo:before {
@@ -49,10 +60,11 @@
 }
 
 .top {
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 5%;
   padding-top: 2rem;
+  max-width: 900px;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -60,7 +72,7 @@
 }
 
 #logo {
-  font-size: 30px;
+  font-size: 23px;
   font-family: Ubuntu
 }
 
@@ -85,14 +97,14 @@ svg {
 }
 
 h1 {
-  font-size: 40px;
-  font-weight: 500;
+  font-size: 45px;
+  font-weight: 800;
   margin-bottom: 1rem;
 }
 
 h2 {
   font-weight: 400;
-  font-size: 19px;
+  font-size: 16px;
 }
 
 h3 {
@@ -124,8 +136,8 @@ h4 {
 .intern {
   z-index: 2;
   position: relative;
-  width: 60%;
-  max-width: 700px;
+  width: 70%;
+  max-width: 900px;
   margin: auto;
   flex-shrink: 0;
   flex-direction: column;
@@ -136,9 +148,11 @@ h4 {
 .projects {
   position: relative;
   width: 80%;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 70px;
+  margin-top: 100px;
+  margin-bottom: 150px;
   text-align: center;
 }
 
@@ -243,14 +257,14 @@ th {
 }
 
 .intern-desc td {
+  width: 70%;
   font-size: 14px;
-  color: #898989;
+  color: rgba(17, 51, 83, 0.5);
   margin: 0;
-  padding: 0px 0px px 0px;
 }
 
 .intern-desc a {
-  color: #898989;
+  color: rgba(17, 51, 83, 0.7);
   text-decoration: none;
   transition: 1s all cubic-bezier();
 }
@@ -259,10 +273,16 @@ th {
 
 th {
   text-align: left;
+  color: rgba(17, 51, 83, 0.6);
 }
 
 td:first-child {
   padding-left: 32px;
+}
+
+.intern-head td:last-child {
+  padding-right: 32px;
+  width: 70px;
 }
 
 td {
@@ -272,11 +292,24 @@ td {
 
 .intern-head td {
   padding-bottom: 0px;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .intern-head td:first-child {
   font-weight: 400;
+}
+
+.company-flex {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.company-flex img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 3px;
 }
 
 #go-git {
@@ -318,10 +351,10 @@ td {
 .footer {
   margin-top: 90px;
   padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 20%;
-  padding-right: 20%;
-  background-color: #E9F6FF;
+  padding-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
 }
 
 .footer #copyright {
@@ -539,16 +572,101 @@ td {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
+  .top {
+    width: 80%;
+    margin-bottom: 10%;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+
   h1 {
-    font-size: 30px;
+    font-size: 22px;
   }
 
   h2 {
-    font-size: 15px;
+    font-size: 13px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  #go-git div {
+    font-size: 13px;
+  }
+
+  .projects h4 {
+    font-size: 18px;
+  }
+
+  .intern-head td {
+    font-size: 10px;
+  }
+
+  .intern-desc td {
+    font-size: 10px;
   }
 
   .intern {
-    width: 95%;
+    width: 80%;
+  }
+
+  .work-flex .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .work-flex p {
+    font-size: 10px;
+  }
+
+  .work-flex .title {
+    font-size: 12px;
+  }
+
+  .projects-flex {
+    margin-top: 30px;
+  }
+
+  .projects {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  th {
+    font-size: 10px;
+  }
+
+  td {
+    padding: 14px 14px 14px 0px;
+  }
+
+  .intern-table thead tr th:nth-child(1) {
+    padding-left: 14px;
+  }
+
+  .intern-table thead tr th:nth-child(3) {
+    padding-right: 14px;
+    width: 50px;
+  }
+
+  td:first-child {
+    padding-left: 14px;
+  }
+
+  .intern-head td:last-child {
+    padding-right: 14px;
+    width: 50px;
+  }
+
+  td:last-child {
+    padding-right: 14px;
+  }
+
+  .footer {
+    width: 80%;
   }
 }
